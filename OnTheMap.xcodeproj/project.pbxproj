@@ -7,23 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB675A2F24C3D63300F1860A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB675A2E24C3D63300F1860A /* LoginVC.swift */; };
+		CB675A3124C3DFB700F1860A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB675A3024C3DFB700F1860A /* CustomTextField.swift */; };
+		CB675A3524C49D6200F1860A /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB675A3424C49D6200F1860A /* TabBarVC.swift */; };
+		CB675A3924C4BA3600F1860A /* SFSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB675A3824C4BA3600F1860A /* SFSymbols.swift */; };
+		CB675A3D24C4C5AC00F1860A /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB675A3C24C4C5AC00F1860A /* CustomLabel.swift */; };
+		CB675A3F24C4C78300F1860A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB675A3E24C4C78300F1860A /* CustomButton.swift */; };
+		CB7FCA2624C3C25C00C28785 /* ListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FCA2524C3C25C00C28785 /* ListTableVC.swift */; };
+		CB7FCA2824C3C2D500C28785 /* MapListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FCA2724C3C2D500C28785 /* MapListCell.swift */; };
+		CB7FCA2B24C3C3A500C28785 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FCA2A24C3C3A500C28785 /* Extensions.swift */; };
+		CBA4BF5C24C8B687000CBD7C /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA4BF5B24C8B687000CBD7C /* ResponseData.swift */; };
+		CBA4BF6024C8DC46000CBD7C /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA4BF5F24C8DC46000CBD7C /* UserProfile.swift */; };
+		CBCDB5CE24C4CCB500CA6B03 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDB5CD24C4CCB500CA6B03 /* LoginViewModel.swift */; };
+		CBCDB5D024C4FD0900CA6B03 /* CustomAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDB5CF24C4FD0900CA6B03 /* CustomAlertVC.swift */; };
+		CBCDB5D224C4FD6800CA6B03 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDB5D124C4FD6800CA6B03 /* CustomAlertView.swift */; };
+		CBCDB5D424C4FF7700CA6B03 /* CustomBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCDB5D324C4FF7700CA6B03 /* CustomBodyLabel.swift */; };
+		CBD139B824C78DCB00A8F446 /* FinalizeCreatePinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD139B724C78DCB00A8F446 /* FinalizeCreatePinVC.swift */; };
+		CBD5225524C6611500A1EA5E /* CreatePinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD5225424C6611500A1EA5E /* CreatePinVC.swift */; };
+		CBD5225824C666A100A1EA5E /* NetworkAuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD5225724C666A100A1EA5E /* NetworkAuthenticationManager.swift */; };
 		CBEDFF3D24C37F09002D6DB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDFF3C24C37F09002D6DB7 /* AppDelegate.swift */; };
 		CBEDFF3F24C37F09002D6DB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDFF3E24C37F09002D6DB7 /* SceneDelegate.swift */; };
-		CBEDFF4124C37F09002D6DB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDFF4024C37F09002D6DB7 /* ViewController.swift */; };
 		CBEDFF4424C37F09002D6DB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBEDFF4224C37F09002D6DB7 /* Main.storyboard */; };
 		CBEDFF4624C37F0C002D6DB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBEDFF4524C37F0C002D6DB7 /* Assets.xcassets */; };
 		CBEDFF4924C37F0C002D6DB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBEDFF4724C37F0C002D6DB7 /* LaunchScreen.storyboard */; };
+		CBEDFF5524C3829C002D6DB7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDFF5424C3829C002D6DB7 /* MapViewController.swift */; };
+		CBEDFF5724C38338002D6DB7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDFF5624C38338002D6DB7 /* NetworkManager.swift */; };
+		CBEDFF5B24C3856F002D6DB7 /* StudentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDFF5A24C3856F002D6DB7 /* StudentInformation.swift */; };
+		CBEDFF5D24C3862F002D6DB7 /* StudentLocationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDFF5C24C3862F002D6DB7 /* StudentLocationList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB675A2E24C3D63300F1860A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		CB675A3024C3DFB700F1860A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		CB675A3424C49D6200F1860A /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		CB675A3824C4BA3600F1860A /* SFSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols.swift; sourceTree = "<group>"; };
+		CB675A3C24C4C5AC00F1860A /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		CB675A3E24C4C78300F1860A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		CB7FCA2524C3C25C00C28785 /* ListTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableVC.swift; sourceTree = "<group>"; };
+		CB7FCA2724C3C2D500C28785 /* MapListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListCell.swift; sourceTree = "<group>"; };
+		CB7FCA2A24C3C3A500C28785 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CBA4BF5B24C8B687000CBD7C /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
+		CBA4BF5F24C8DC46000CBD7C /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		CBCDB5CD24C4CCB500CA6B03 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CBCDB5CF24C4FD0900CA6B03 /* CustomAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertVC.swift; sourceTree = "<group>"; };
+		CBCDB5D124C4FD6800CA6B03 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		CBCDB5D324C4FF7700CA6B03 /* CustomBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBodyLabel.swift; sourceTree = "<group>"; };
+		CBD139B724C78DCB00A8F446 /* FinalizeCreatePinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalizeCreatePinVC.swift; sourceTree = "<group>"; };
+		CBD5225424C6611500A1EA5E /* CreatePinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePinVC.swift; sourceTree = "<group>"; };
+		CBD5225724C666A100A1EA5E /* NetworkAuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAuthenticationManager.swift; sourceTree = "<group>"; };
 		CBEDFF3924C37F09002D6DB7 /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBEDFF3C24C37F09002D6DB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBEDFF3E24C37F09002D6DB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CBEDFF4024C37F09002D6DB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CBEDFF4324C37F09002D6DB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBEDFF4524C37F0C002D6DB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBEDFF4824C37F0C002D6DB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBEDFF4A24C37F0C002D6DB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBEDFF5424C3829C002D6DB7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CBEDFF5624C38338002D6DB7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CBEDFF5A24C3856F002D6DB7 /* StudentInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInformation.swift; sourceTree = "<group>"; };
+		CBEDFF5C24C3862F002D6DB7 /* StudentLocationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +79,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB7FCA2924C3C38E00C28785 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CB7FCA2A24C3C3A500C28785 /* Extensions.swift */,
+				CB675A3824C4BA3600F1860A /* SFSymbols.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CBCDB5CC24C4CC9D00CA6B03 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				CBCDB5CD24C4CCB500CA6B03 /* LoginViewModel.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		CBD5225624C6667D00A1EA5E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CBEDFF5624C38338002D6DB7 /* NetworkManager.swift */,
+				CBD5225724C666A100A1EA5E /* NetworkAuthenticationManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		CBEDFF3024C37F09002D6DB7 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +124,58 @@
 		CBEDFF3B24C37F09002D6DB7 /* OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
+				CBD5225624C6667D00A1EA5E /* Networking */,
+				CBCDB5CC24C4CC9D00CA6B03 /* Authentication */,
+				CB7FCA2924C3C38E00C28785 /* Utilities */,
+				CBEDFF5224C37F33002D6DB7 /* Controller */,
+				CBEDFF5124C37F2A002D6DB7 /* Views */,
+				CBEDFF5024C37F1C002D6DB7 /* Model */,
 				CBEDFF3C24C37F09002D6DB7 /* AppDelegate.swift */,
 				CBEDFF3E24C37F09002D6DB7 /* SceneDelegate.swift */,
-				CBEDFF4024C37F09002D6DB7 /* ViewController.swift */,
 				CBEDFF4224C37F09002D6DB7 /* Main.storyboard */,
 				CBEDFF4524C37F0C002D6DB7 /* Assets.xcassets */,
 				CBEDFF4724C37F0C002D6DB7 /* LaunchScreen.storyboard */,
 				CBEDFF4A24C37F0C002D6DB7 /* Info.plist */,
 			);
 			path = OnTheMap;
+			sourceTree = "<group>";
+		};
+		CBEDFF5024C37F1C002D6DB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CBEDFF5A24C3856F002D6DB7 /* StudentInformation.swift */,
+				CBEDFF5C24C3862F002D6DB7 /* StudentLocationList.swift */,
+				CBA4BF5B24C8B687000CBD7C /* ResponseData.swift */,
+				CBA4BF5F24C8DC46000CBD7C /* UserProfile.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CBEDFF5124C37F2A002D6DB7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB7FCA2724C3C2D500C28785 /* MapListCell.swift */,
+				CB675A3024C3DFB700F1860A /* CustomTextField.swift */,
+				CB675A3C24C4C5AC00F1860A /* CustomLabel.swift */,
+				CB675A3E24C4C78300F1860A /* CustomButton.swift */,
+				CBCDB5D124C4FD6800CA6B03 /* CustomAlertView.swift */,
+				CBCDB5D324C4FF7700CA6B03 /* CustomBodyLabel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CBEDFF5224C37F33002D6DB7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CBEDFF5424C3829C002D6DB7 /* MapViewController.swift */,
+				CB7FCA2524C3C25C00C28785 /* ListTableVC.swift */,
+				CB675A2E24C3D63300F1860A /* LoginVC.swift */,
+				CB675A3424C49D6200F1860A /* TabBarVC.swift */,
+				CBCDB5CF24C4FD0900CA6B03 /* CustomAlertVC.swift */,
+				CBD5225424C6611500A1EA5E /* CreatePinVC.swift */,
+				CBD139B724C78DCB00A8F446 /* FinalizeCreatePinVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +249,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBEDFF4124C37F09002D6DB7 /* ViewController.swift in Sources */,
+				CB675A3D24C4C5AC00F1860A /* CustomLabel.swift in Sources */,
+				CBCDB5D024C4FD0900CA6B03 /* CustomAlertVC.swift in Sources */,
+				CBD139B824C78DCB00A8F446 /* FinalizeCreatePinVC.swift in Sources */,
+				CBEDFF5724C38338002D6DB7 /* NetworkManager.swift in Sources */,
+				CBD5225824C666A100A1EA5E /* NetworkAuthenticationManager.swift in Sources */,
+				CB675A3124C3DFB700F1860A /* CustomTextField.swift in Sources */,
+				CB7FCA2B24C3C3A500C28785 /* Extensions.swift in Sources */,
+				CBA4BF5C24C8B687000CBD7C /* ResponseData.swift in Sources */,
+				CBCDB5CE24C4CCB500CA6B03 /* LoginViewModel.swift in Sources */,
 				CBEDFF3D24C37F09002D6DB7 /* AppDelegate.swift in Sources */,
+				CBEDFF5D24C3862F002D6DB7 /* StudentLocationList.swift in Sources */,
+				CBD5225524C6611500A1EA5E /* CreatePinVC.swift in Sources */,
+				CB675A2F24C3D63300F1860A /* LoginVC.swift in Sources */,
+				CBEDFF5524C3829C002D6DB7 /* MapViewController.swift in Sources */,
+				CB675A3924C4BA3600F1860A /* SFSymbols.swift in Sources */,
+				CB7FCA2624C3C25C00C28785 /* ListTableVC.swift in Sources */,
+				CBCDB5D224C4FD6800CA6B03 /* CustomAlertView.swift in Sources */,
+				CBEDFF5B24C3856F002D6DB7 /* StudentInformation.swift in Sources */,
+				CB7FCA2824C3C2D500C28785 /* MapListCell.swift in Sources */,
+				CB675A3524C49D6200F1860A /* TabBarVC.swift in Sources */,
 				CBEDFF3F24C37F09002D6DB7 /* SceneDelegate.swift in Sources */,
+				CBA4BF6024C8DC46000CBD7C /* UserProfile.swift in Sources */,
+				CB675A3F24C4C78300F1860A /* CustomButton.swift in Sources */,
+				CBCDB5D424C4FF7700CA6B03 /* CustomBodyLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +417,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KG5A8K7RKR;
 				INFOPLIST_FILE = OnTheMap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +436,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KG5A8K7RKR;
 				INFOPLIST_FILE = OnTheMap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
