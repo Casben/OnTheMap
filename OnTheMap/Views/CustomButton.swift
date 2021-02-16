@@ -11,6 +11,7 @@ import UIKit
 class CustomButton: UIButton {
     
     //MARK: - Initalizers
+    
     init(title: String?) {
         super.init(frame: .zero)
         configure(title: title)
@@ -21,7 +22,8 @@ class CustomButton: UIButton {
     }
     
     
-    //MARK: - Configuration
+    //MARK: - Helpers
+    
     func configure(title: String?) {
         setTitle(title, for: .normal)
         titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)

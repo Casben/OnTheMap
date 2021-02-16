@@ -16,6 +16,7 @@ protocol LogoutFromMapVCDelegate: class {
 class MapViewController: UIViewController {
     
     //MARK: - Properties
+    
     var mapView = MKMapView()
     var locations: [StudentInformation] = []
     var delegate: LogoutFromMapVCDelegate?
@@ -31,6 +32,7 @@ class MapViewController: UIViewController {
     
     
     //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
@@ -43,7 +45,8 @@ class MapViewController: UIViewController {
     }
     
     
-    //MARK: - Methods
+    //MARK: - Helpers
+    
     func loadLocationData() {
         NetworkManager.shared.getStudentLocations { [weak self] (studentLocations, error) in
             guard let self = self else { return }
@@ -93,7 +96,8 @@ class MapViewController: UIViewController {
     }
 
     
-    //MARK: - Helpers
+    //MARK: - Methods
+    
     @objc func refreshMapData() {
         refreshPinsOnMap()
     }
@@ -114,8 +118,6 @@ class MapViewController: UIViewController {
         delegate?.logOutFromMapVC()
     }
     
-    
-    //MARK: - Configuration
     func configure() {
         view = mapView
         view.backgroundColor = .systemBackground
@@ -134,6 +136,7 @@ class MapViewController: UIViewController {
 
 
 //MARK: - MapView Delegate
+
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let reuseId = "pin"
@@ -163,6 +166,7 @@ extension MapViewController: MKMapViewDelegate {
 
 
 //MARK: - CreatePinVC Delegate
+
 extension MapViewController: CreatePinVCDelegate {
     func dismissCreatePinVC() {
         dismiss(animated: true)

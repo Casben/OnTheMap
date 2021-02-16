@@ -26,20 +26,34 @@ class FinalizeCreatePinVC: UIViewController {
     var delegate: FinalizeCreatePinVCDelegate?
     
 
-    //MARK: - Lifecycles
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configure()
-        print("TESTING STUDENT: \(student)")
         showLocation(of: student)
         
     }
     
     
-    //MARK: - Methods
+    //MARK: - Helpers
+    
+    func configure() {
+        view = mapView
+        view.addSubview(createNewPinButton)
+        createNewPinButton.translatesAutoresizingMaskIntoConstraints = false
+        createNewPinButton.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
+        
+        NSLayoutConstraint.activate([
+            createNewPinButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            createNewPinButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30),
+            createNewPinButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+            createNewPinButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50)
+        ])
+    }
+    
     func finishAddingLocation() {
-        print("uploaded info is: \(student)")
         NetworkManager.shared.sendStudentLocation(with: student) { (success, error) in
             if error != nil {
                 self.presentCustomAlertOnMainThread(title: "Unable to upload location", message: "please try again", buttonTitle: "Ok")
@@ -70,25 +84,9 @@ class FinalizeCreatePinVC: UIViewController {
     }
     
  
-    //MARK: - Helpers
+    //MARK: - Methods
     @objc func handleCreatePin() {
         finishAddingLocation()
-    }
-    
-    
-    //MARK: - Configuration
-    func configure() {
-        view = mapView
-        view.addSubview(createNewPinButton)
-        createNewPinButton.translatesAutoresizingMaskIntoConstraints = false
-        createNewPinButton.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
-        
-        NSLayoutConstraint.activate([
-            createNewPinButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            createNewPinButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30),
-            createNewPinButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
-            createNewPinButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50)
-        ])
     }
 }
 

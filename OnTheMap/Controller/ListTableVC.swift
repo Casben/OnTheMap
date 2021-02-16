@@ -15,11 +15,13 @@ protocol LogoutFromListTableVCDelegate: class {
 class ListTableVC: UITableViewController {
     
     //MARK: - Properties
+    
     var locations: [StudentInformation] = []
     var delegate: LogoutFromListTableVCDelegate?
     
 
-    //MARK: - Lifecycles
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
@@ -28,6 +30,7 @@ class ListTableVC: UITableViewController {
     }
     
     //MARK: - Methods
+    
     func loadLocationData() {
         NetworkManager.shared.getStudentLocations { [weak self] (studentLocations, error) in
             guard let self = self else { return }

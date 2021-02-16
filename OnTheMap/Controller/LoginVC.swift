@@ -15,6 +15,7 @@ protocol AuthenticationControllerProtocol {
 class LoginVC: UIViewController {
     
     //MARK: - Properties
+    
     private var viewModel = LoginViewModel()
     let logoLabel = CustomLabel(fontSize: 40)
     private let emailTextField = CustomTextField(placholder: "Email")
@@ -42,14 +43,15 @@ class LoginVC: UIViewController {
         button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
         return button
     }()
-    //MARK: - lifecycles
+    //MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
     }
     
-    //MARK: - Methods
+    //MARK: - Helpers
+    
     func setTextfieldObservers() {
         emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
@@ -59,45 +61,6 @@ class LoginVC: UIViewController {
         emailTextField.text = ""
         passwordTextField.text = ""
     }
-    
-    
-    //MARK: - Helpers
-    @objc func handleLogin() {
-        NetworkAuthenticationManager.shared.authenticateUser(withEmail: emailTextField.text ?? "", password: passwordTextField.text ?? "") { (dataResponse, error) in
-            
-            if error != nil {
-                self.presentCustomAlertOnMainThread(title: "Something went wrong..", message: "Invalid email or password or network error, please try again.", buttonTitle: "Ok")
-            }
-            guard let responseData = dataResponse else { return }
-            
-            DispatchQueue.main.async {
-                let tabBarVC = TabBarVC()
-                TabBarVC.studentKey = responseData.account.key
-                self.present(tabBarVC, animated: true)
-                self.resetLoginVC()
-            }
-            print(responseData)
-            
-        }
-    }
-    
-    @objc func textDidChange(sender: UITextField) {
-        if sender == emailTextField {
-            viewModel.email = sender.text
-        } else {
-            viewModel.password = sender.text
-        }
-        checkFormStatus()
-    }
-    
-    @objc func handleShowSignUp() {
-        let app = UIApplication.shared
-        app.openURL(URL(string: "https://auth.udacity.com/sign-up")!)
-    }
-    
-    
-    
-    //MARK: - Configuration
     
     func configureUI() {
         configureGradientBackground()
@@ -129,6 +92,42 @@ class LoginVC: UIViewController {
         gradient.locations = [0, 1]
         view.layer.addSublayer(gradient)
         gradient.frame = view.frame
+    }
+    
+    
+    //MARK: - Methods
+    
+    @objc func handleLogin() {
+        NetworkAuthenticationManager.shared.authenticateUser(withEmail: emailTextField.text ?? "", password: passwordTextField.text ?? "") { (dataResponse, error) in
+            
+            if error != nil {
+                self.presentCustomAlertOnMainThread(title: "Something went wrong..", message: "Invalid email or password or network error, please try again.", buttonTitle: "Ok")
+            }
+            guard let responseData = dataResponse else { return }
+            
+            DispatchQueue.main.async {
+                let tabBarVC = TabBarVC()
+                TabBarVC.studentKey = responseData.account.key
+                self.present(tabBarVC, animated: true)
+                self.resetLoginVC()
+            }
+            print(responseData)
+            
+        }
+    }
+    
+    @objc func textDidChange(sender: UITextField) {
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        } else {
+            viewModel.password = sender.text
+        }
+        checkFormStatus()
+    }
+    
+    @objc func handleShowSignUp() {
+        let app = UIApplication.shared
+        app.openURL(URL(string: "https://auth.udacity.com/sign-up")!)
     }
     
 }

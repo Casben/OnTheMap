@@ -12,6 +12,7 @@ class CustomLabel: UILabel {
     
     
     //MARK: - Initalizers
+    
     init(fontSize: CGFloat) {
         super.init(frame: .zero)
         configure(fontSize: fontSize)
@@ -22,7 +23,8 @@ class CustomLabel: UILabel {
     }
     
     
-    //MARK: - Configuration
+    //MARK: - Helpers
+    
     func configure(fontSize: CGFloat) {
         textAlignment = .center
         font = .boldSystemFont(ofSize: fontSize)

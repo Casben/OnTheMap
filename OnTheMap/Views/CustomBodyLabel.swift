@@ -11,6 +11,7 @@ import UIKit
 class CustomBodyLabel: UILabel {
 
     //MARK: - Initalizers
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -25,7 +26,8 @@ class CustomBodyLabel: UILabel {
         self.textAlignment = textAlignment
     }
     
-    //MARK: - Configuration
+    //MARK: - Helpers
+    
     private func configure() {
         textColor = .secondaryLabel
         font = UIFont.preferredFont(forTextStyle: .body)

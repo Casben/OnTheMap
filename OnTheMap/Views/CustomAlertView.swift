@@ -11,6 +11,7 @@ import UIKit
 class CustomAlertView: UIView {
     
     //MARK: - Initalizers
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -20,7 +21,8 @@ class CustomAlertView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - Configuration
+    //MARK: - Helpers
+    
     private func configure() {
         backgroundColor       = .systemBackground
         layer.cornerRadius    = 16

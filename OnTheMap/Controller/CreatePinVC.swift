@@ -16,6 +16,7 @@ protocol CreatePinVCDelegate: class {
 class CreatePinVC: UIViewController {
 
     //MARK: - Properties
+    
     let locationTextField = CustomTextField(placholder: "Ender a location")
     let linkTextField = CustomTextField(placholder: "Enter a link to share")
     var delegate: CreatePinVCDelegate?
@@ -27,10 +28,9 @@ class CreatePinVC: UIViewController {
     var firstName: String!
     var lastName: String!
     
+
+    //MARK: - Lifecycle
     
-    
-    
-    //MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
@@ -39,12 +39,10 @@ class CreatePinVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        retreiveUserInfo()
     }
     
+    //MARK: - Helpers
     
-
-    //MARK: - Configuration
     func configure() {
         view.backgroundColor = .systemBackground
         configureNavigationButtons()
@@ -82,25 +80,6 @@ class CreatePinVC: UIViewController {
         }
     }
     
-    @objc func handleFindLocation() {
-        activityIndicator.startAnimating()
-        let newLocation = locationTextField.text
-        
-        guard let url = URL(string: self.linkTextField.text!), UIApplication.shared.canOpenURL(url) else {
-            self.presentCustomAlertOnMainThread(title: "Invalid link", message: "Please include 'https://' in the link", buttonTitle: "Ok")
-            activityIndicator.stopAnimating()
-            return
-        }
-        
-        geocodePosition(newLocation: newLocation ?? "")
-        
-    }
-    
-    
-    @objc func handleDismiss() {
-        self.dismiss(animated: true)
-    }
-    //MARK: - Methods
     func retreiveUserInfo() {
         activityIndicator.startAnimating()
         NetworkAuthenticationManager.shared.retrieveUserInfo(withKey: TabBarVC.studentKey) { (response, error) in
@@ -152,6 +131,27 @@ class CreatePinVC: UIViewController {
         let student = StudentInformation(createdAt: "", firstName: firstName, lastName: lastName, latitude: coordinate.latitude, longitude: coordinate.longitude, mapString: locationTextField.text ?? "", mediaURL: linkTextField.text?.lowercased() ?? "", objectId: "", uniqueKey: TabBarVC.studentKey, updatedAt: "")
         print(student)
         return student
+    }
+    
+    //MARK: - Methods
+    
+    @objc func handleFindLocation() {
+        activityIndicator.startAnimating()
+        let newLocation = locationTextField.text
+        
+        guard let url = URL(string: self.linkTextField.text!), UIApplication.shared.canOpenURL(url) else {
+            self.presentCustomAlertOnMainThread(title: "Invalid link", message: "Please include 'https://' in the link", buttonTitle: "Ok")
+            activityIndicator.stopAnimating()
+            return
+        }
+        
+        geocodePosition(newLocation: newLocation ?? "")
+        
+    }
+    
+    
+    @objc func handleDismiss() {
+        self.dismiss(animated: true)
     }
 }
 

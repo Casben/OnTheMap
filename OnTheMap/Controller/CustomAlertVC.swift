@@ -10,8 +10,8 @@ import UIKit
 
 class CustomAlertVC: UIViewController {
     
-    
     //MARK: - Properties
+    
     let containerView = CustomAlertView()
     let titleLabel = CustomLabel(fontSize: 20)
     let messageLabel = CustomBodyLabel(textAlignment: .center)
@@ -23,7 +23,8 @@ class CustomAlertVC: UIViewController {
     let padding: CGFloat = 20
     
     
-    //MARK: - Initalizers
+    //MARK: - Intializers
+    
     init(title: String, message: String, buttonTitle: String) {
         super.init(nibName: nil, bundle: nil)
         self.alertTitle = title
@@ -48,7 +49,8 @@ class CustomAlertVC: UIViewController {
         configureMessageLabel()
     }
     
-    //MARK: - Configuration
+    //MARK: - Helpers
+    
     func configureContainerView() {
         NSLayoutConstraint.activate([
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -94,7 +96,8 @@ class CustomAlertVC: UIViewController {
         ])
     }
     
-    //MARK: - Helpers
+    //MARK: - Methods
+    
     @objc func dismissVC() {
         dismiss(animated: true)
     }

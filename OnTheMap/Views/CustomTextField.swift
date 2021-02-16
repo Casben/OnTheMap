@@ -11,6 +11,7 @@ import UIKit
 class CustomTextField: UITextField {
 
     //MARK: - Initalizers
+    
     init(placholder: String) {
         super.init(frame: .zero)
         
@@ -25,7 +26,8 @@ class CustomTextField: UITextField {
         super.init(coder: coder)
     }
 
-    //MARK: - Configuration
+    //MARK: - Helpers
+    
     func configure() {
         
         leftViewMode = .always

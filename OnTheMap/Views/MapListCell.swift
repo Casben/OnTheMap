@@ -11,6 +11,7 @@ import UIKit
 class MapListCell: UITableViewCell {
     
     //MARK: - Properties
+    
     static let reuseID = "MapListCell"
     let mapIcon = UIImageView()
     let studentName = UILabel()
@@ -18,6 +19,7 @@ class MapListCell: UITableViewCell {
     
     
     //MARK: - Initalizers
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         configure()
@@ -29,7 +31,8 @@ class MapListCell: UITableViewCell {
     }
     
     
-    //MARK: - Methods
+    //MARK: - Helpers
+    
     func configureCell(with location: StudentInformation) {
         let firstName = location.firstName ?? "First Name: N/A"
         let lastName = location.lastName ?? "Last Name: N/A"
@@ -39,8 +42,6 @@ class MapListCell: UITableViewCell {
         mediaLabel.text = mediaUrl
     }
     
-    
-    //MARK: - Configuration
     func configure() {
         addSubviews(mapIcon, studentName, mediaLabel)
         setProperties()

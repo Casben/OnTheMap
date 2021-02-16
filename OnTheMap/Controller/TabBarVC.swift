@@ -14,14 +14,14 @@ class TabBarVC: UITabBarController {
     static var studentKey: String!
     
         
-    //MARK: - Lifecycles
+    //MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
     }
     
-    //MARK: - Configuration
+    //MARK: - Helpers
     
     func configure() {
         let mapVC = MapViewController()
