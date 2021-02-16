@@ -84,6 +84,7 @@ class LoginVC: UIViewController {
         configureUIElements(emailTextField, passwordTextField, loginButton, dontHaveAccountButton)
         setTextfieldObservers()
         logoLabel.text = "On the Map"
+        logoLabel.textColor = .systemBackground
     }
     
     func configureGradientBackground() {
